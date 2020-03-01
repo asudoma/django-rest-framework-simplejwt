@@ -33,9 +33,6 @@ class OutstandingTokenAdmin(admin.ModelAdmin):
     def has_add_permission(self, *args, **kwargs):
         return False
 
-    def has_delete_permission(self, *args, **kwargs):
-        return False
-
     def has_change_permission(self, request, obj=None):
         return (
             request.method in ['GET', 'HEAD'] and  # noqa: W504
